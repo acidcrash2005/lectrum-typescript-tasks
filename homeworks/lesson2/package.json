@@ -1,0 +1,15 @@
+{
+  "name": "lesson1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn compile && yarn execute",
+    "compile": "tsc ./src/index.ts",
+    "execute": "node ./src/index.js"
+  },
+  "dependencies": {
+    "typescript": "^3.8.2"
+  },
+  "devDependencies": {}
+}
