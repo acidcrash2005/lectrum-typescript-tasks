@@ -17,6 +17,24 @@ interface CurrencyObject {
     value: number;
 }
 
+interface CurrencyClass extends CurrencyObject {
+    add(number: number): CurrencyObject;
+    subtract(number: number): CurrencyObject;
+    multiply(number: number): CurrencyObject;
+    divide(number: number): CurrencyObject;
+    distribute(count: number): CurrencyObject[];
+    dollars(): number;
+    cents(): number;
+    format(useSymbol: boolean): string;
+    toString(): string;
+    toJSON(): number;
+    parse(
+        value: number | string | CurrencyObject,
+        opts: Settings,
+        useRounding: boolean
+    ): number;
+}
+
 const round = (v: number) => Math.round(v);
 const pow = (p: number) => Math.pow(10, p);
 const rounding = (value: number, increment: number) =>
@@ -39,7 +57,7 @@ const defaults: Settings = {
     useVedic: false,
 };
 
-class Currency implements CurrencyObject {
+class Currency implements CurrencyClass {
     private _settings: Settings;
     private _precision: number;
 
