@@ -1,5 +1,18 @@
 {
+  "name": "Lectrum_Typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn compile && yarn execute",
+    "compile": "tsc ./src/index.ts",
+    "execute": "node ./src/index.js"
+  },
+  "dependencies": {
+
+  },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.2"
   }
 }
