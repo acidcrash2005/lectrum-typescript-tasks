@@ -1,4 +1,23 @@
-var emitter = {};
+type Func = (type: string, handler: () => void) => void;
+
+interface Emitter {
+    events: {
+        [key: string]: Func[];
+    };
+    on: Func;
+}
+
+var emitter: Emitter = {
+    events: {},
+    on: function(type, handler) {
+        if (this.events.hasOwnProperty(type)) {
+            this.events[type].push(handler);
+        } else {
+            this.events[type] = [handler];
+        }
+        return this;
+    },
+};
 
 function Emitter() {
     var e = Object.create(emitter);
@@ -6,7 +25,7 @@ function Emitter() {
     return e;
 }
 
-function Event(type) {
+function Event(type): void {
     this.type = type;
     this.timeStamp = new Date();
 }
