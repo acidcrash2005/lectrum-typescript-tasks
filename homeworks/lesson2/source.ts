@@ -47,7 +47,7 @@ class Emitter implements IEmitter {
     ) {
         const emitter = new Emitter();
 
-        arr.map(name => {
+        arr.forEach(name => {
             obj[name] = function(type, handler) {
                 return emitter[name](type, handler);
             };
