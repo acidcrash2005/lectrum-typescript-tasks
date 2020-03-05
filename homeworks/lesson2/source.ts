@@ -7,13 +7,16 @@ interface IEvent {
     timeStamp: Date;
 }
 
-interface IEmitter {
-    events: {
-        [key: string]: ArrayHandlers;
-    };
+interface IEvents {
     on: EventFunc;
     off: EventFunc;
     trigger: TriggerFunc;
+}
+
+interface IEmitter extends IEvents {
+    events: {
+        [key: string]: ArrayHandlers;
+    };
 }
 
 class EmitterEvent implements IEvent {
@@ -35,12 +38,18 @@ class Emitter implements IEmitter {
         this.events = {};
     }
 
-    static mixin(obj: { [key: string]: ArrayHandlers }, arr: string[]) {
+    // С этой функцией вообще беда, я не понимаю что она должна делать.
+    // Преписал по логике, плюс минус как думаю он должна работать,
+    // но сомневаюсь, что это правильно.
+    static mixin(
+        obj: { [key: string]: (type: string, handler: () => void) => void },
+        arr: ['on' | 'off']
+    ) {
         const emitter = new Emitter();
 
         arr.map(name => {
-            obj[name] = () => {
-                return emitter[name].apply(emitter, arguments);
+            obj[name] = function(type, handler) {
+                return emitter[name](type, handler);
             };
         });
     }

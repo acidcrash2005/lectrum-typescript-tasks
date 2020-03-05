@@ -8,9 +8,7 @@
     "compile": "tsc ./src/index.ts",
     "execute": "node ./src/index.js"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "prettier": "^1.19.1",
     "typescript": "^3.8.2"
