@@ -1,14 +1,27 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "target": "es5",
+    "module": "commonjs",
     "lib": [
-      "esnext",
-      "dom"
+      "es6"
     ],
-    "include": [
-      "./src/**/*"
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "baseUrl": "./",
+    "typeRoots": [
+      "./"
     ],
-    "strict": true
-  }
+    "types": [],
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "files": [
+    "index.d.ts",
+    "adiitional.ts",
+    "source.ts",
+    "index.ts",
+    "typing.d.ts",
+    "emmiter.ts"
+  ]
 }
