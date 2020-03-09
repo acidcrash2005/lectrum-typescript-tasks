@@ -1,4 +1,4 @@
-import { currency } from 'currency';
+import { currency } from 'currency/index';
 
 const defaults = {
     symbol: '$',
