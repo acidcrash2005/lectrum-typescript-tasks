@@ -1,4 +1,4 @@
-import { Event, Emitter } from 'emmiter/index';
+import { Event, Emitter } from 'emmiter';
 
 var emitter = new Emitter();
 
