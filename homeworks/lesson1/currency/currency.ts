@@ -1,6 +1,12 @@
-import { currency } from 'currency/index';
+import {
+    Currency,
+    CurrencyPrototype,
+    AdditionalSettings,
+    Settings,
+    CurrencyValue,
+} from 'currency';
 
-const defaults = {
+const defaults: Settings = {
     symbol: '$',
     separator: ',',
     decimal: '.',
@@ -11,26 +17,30 @@ const defaults = {
     negativePattern: '-!#',
 };
 
-const round = v => Math.round(v);
-const pow = p => Math.pow(10, p);
-const rounding = (value, increment) => round(value / increment) * increment;
+const round = (v: number) => Math.round(v);
+const pow = (p: number) => Math.pow(10, p);
+const rounding = (value: number, increment: number) =>
+    round(value / increment) * increment;
 
 const groupRegex = /(\d)(?=(\d{3})+\b)/g;
 const vedicRegex = /(\d)(?=(\d\d)+\d\b)/g;
 
-/**
- * Create a new instance of currency.js
- * @param {number|string|currency} value
- * @param {object} [opts]
- */
-function currency(value, opts) {
+const currency = (function(
+    this: CurrencyPrototype,
+    value: CurrencyValue,
+    opts: AdditionalSettings & Settings
+) {
     let that = this;
 
     if (!(that instanceof currency)) {
         return new currency(value, opts);
     }
 
-    let settings = Object.assign({}, defaults, opts),
+    let settings = Object.assign<{}, Settings, AdditionalSettings>(
+            {},
+            defaults,
+            opts
+        ),
         precision = pow(settings.precision),
         v = parse(value, settings);
 
@@ -51,25 +61,32 @@ function currency(value, opts) {
     // Intended for internal usage only - subject to change
     this._settings = settings;
     this._precision = precision;
-}
+} as Function) as Currency;
 
-function parse(value, opts, useRounding = true) {
+const parse = function(
+    value: CurrencyValue,
+    opts: Settings,
+    useRounding = true
+) {
     let v = 0,
         { decimal, errorOnInvalid, precision: decimals } = opts,
-        precision = pow(decimals),
-        isNumber = typeof value === 'number';
+        precision = pow(decimals);
 
-    if (isNumber || value instanceof currency) {
-        v = (isNumber ? value : value.value) * precision;
+    if (typeof value === 'number') {
+        v = value * precision;
     } else if (typeof value === 'string') {
         let regex = new RegExp('[^-\\d' + decimal + ']', 'g'),
             decimalString = new RegExp('\\' + decimal, 'g');
         v =
-            value
-                .replace(/\((.*)\)/, '-$1') // allow negative e.g. (1.99)
-                .replace(regex, '') // replace any non numeric values
-                .replace(decimalString, '.') * precision; // convert any decimal values // scale number to integer value
+            Number(
+                value
+                    .replace(/\((.*)\)/, '-$1') // allow negative e.g. (1.99)
+                    .replace(regex, '') // replace any non numeric values
+                    .replace(decimalString, '.')
+            ) * precision; // convert any decimal values // scale number to integer value
         v = v || 0;
+    } else if (value instanceof currency) {
+        v = value.value;
     } else {
         if (errorOnInvalid) {
             throw Error('Invalid Input');
@@ -78,10 +95,10 @@ function parse(value, opts, useRounding = true) {
     }
 
     // Handle additional decimal for proper rounding.
-    v = v.toFixed(4);
+    v = Number(v.toFixed(4));
 
     return useRounding ? round(v) : v;
-}
+};
 
 currency.prototype = {
     /**
@@ -155,8 +172,8 @@ currency.prototype = {
             pennies-- > 0 &&
                 (item =
                     intValue >= 0
-                        ? item.add(1 / _precision)
-                        : item.subtract(1 / _precision));
+                        ? this.add(1 / _precision)
+                        : this.subtract(1 / _precision));
 
             distribution.push(item);
         }
