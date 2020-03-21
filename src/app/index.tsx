@@ -8,7 +8,7 @@ import { store } from './init/store';
 import { history } from './init/middleware';
 
 // Routes
-import { Routes } from './routes/index';
+import { Routes } from './routes';
 
 export const App: FC = () => (
   <Provider store={store}>

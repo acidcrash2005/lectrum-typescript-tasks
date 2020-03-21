@@ -24,7 +24,10 @@
     "import/extensions": [1, "ignorePackages", {
       "ts": "never",
       "tsx": "never"
-    }]
+    }],
+    "camelcase": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0
   },
   "settings": {
     "import/parsers": {
