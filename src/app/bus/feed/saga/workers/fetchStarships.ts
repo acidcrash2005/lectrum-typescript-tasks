@@ -1,10 +1,11 @@
 // Core
 import { put, call, delay } from 'redux-saga/effects';
+import { SagaIterator } from '@redux-saga/core';
 
 // Instruments
 import { feedActions } from '../../actions';
 
-export function* fetchStarships() {
+export function* fetchStarships(): SagaIterator {
   try {
     yield put(feedActions.startFetching());
 
@@ -13,7 +14,7 @@ export function* fetchStarships() {
     const { results } = yield call([response, response.json]);
 
     if (response.status !== 200) {
-      throw new Error('We can\'t receive starships 😢');
+      throw new Error("We can't receive starships 😢");
     }
 
     yield delay(200);

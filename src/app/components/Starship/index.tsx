@@ -1,7 +1,7 @@
 // Core
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { createMatchSelector, RouterState } from 'connected-react-router';
+import { useRouteMatch } from 'react-router-dom';
 import { book } from '../../routes/book';
 
 // Instruments
@@ -13,9 +13,7 @@ import { FeedState } from '../../bus/feed/reducer';
 
 export const Starship: FC = () => {
   const { starships } = useSelector<AppState, FeedState>((state) => state.feed);
-  const matchSelector = createMatchSelector(book.starship);
-  const state1 = useSelector<AppState, RouterState>((state) => state.router);
-  const match = matchSelector(state1);
+  const match = useRouteMatch<{ starship: string }>(book.starship);
 
   if (!match) {
     return null;
@@ -27,7 +25,9 @@ export const Starship: FC = () => {
     return null;
   }
 
-  const starship = starships.find((starship) => starship.name.replace(/ /g, '-').toLowerCase() === starshipName);
+  const starship = starships.find(
+    ({ name }) => name.replace(/ /g, '-').toLowerCase() === starshipName,
+  );
 
   if (!starship) {
     return null;
@@ -44,28 +44,28 @@ export const Starship: FC = () => {
         <div>
           <span>Имя:</span>
           <span>
-&nbsp;
+            &nbsp;
             {name}
           </span>
         </div>
         <div>
           <span>Класс:</span>
           <span>
-&nbsp;
+            &nbsp;
             {starship_class}
           </span>
         </div>
         <div>
           <span>Производитель:</span>
           <span>
-&nbsp;
+            &nbsp;
             {manufacturer}
           </span>
         </div>
         <div>
           <span>Команда:</span>
           <span>
-&nbsp;
+            &nbsp;
             {crew}
           </span>
         </div>

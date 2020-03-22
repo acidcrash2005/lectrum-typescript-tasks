@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import cx from 'classnames';
-import { Field } from 'redux-form';
+import { Field, WrappedFieldMetaProps, FieldArrayFieldsProps } from 'redux-form';
 
-const getValidityClassName = (meta) => {
+const getValidityClassName = (meta: WrappedFieldMetaProps) => {
   if (meta.asyncValidating) {
     return 'async-validating';
   }
@@ -20,7 +20,14 @@ const getValidityClassName = (meta) => {
   }
 };
 
-export const customInput = (props) => {
+type OwnProps = {
+  meta: WrappedFieldMetaProps;
+  type: string;
+  input: Field;
+  label: string;
+};
+
+export const customInput: FC<OwnProps> = (props) => {
   const {
     label, input, type, meta,
   } = props;
@@ -43,20 +50,28 @@ export const customInput = (props) => {
   );
 };
 
-export const customSelect = (props) => (
-  <div className="custom-select-container">
-    <label>{props.label}</label>
-    <select {...props.input}>
-      <option value="tabs">Tabs</option>
-      <option value="spaces">Spaces</option>
-    </select>
-  </div>
-);
+export const customSelect: FC<OwnProps> = (props) => {
+  const { label, input } = props;
 
-export const discounts = ({ fields }) => (
+  return (
+    <div className="custom-select-container">
+      <label>{label}</label>
+      <select {...input}>
+        <option value="tabs">Tabs</option>
+        <option value="spaces">Spaces</option>
+      </select>
+    </div>
+  );
+};
+
+type DiscountProps = {
+  fields: FieldArrayFieldsProps<Field>;
+};
+
+export const discounts: FC<DiscountProps> = ({ fields }) => (
   <div className="custom-field-array-container">
     {fields.map((code, index) => (
-      <div key={index} className="field-array-item">
+      <div key={code} className="field-array-item">
         <Field
           name={code}
           type="text"
@@ -73,7 +88,7 @@ export const discounts = ({ fields }) => (
       type="button"
       onClick={() => {
         console.log(Array.isArray(fields));
-        fields.push();
+        // fields.push(); //TODO Wat is this push need todo?
         // console.log(fields);
       }}
     >

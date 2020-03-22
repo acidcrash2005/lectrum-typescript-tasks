@@ -3,9 +3,10 @@ import React from 'react';
 
 // Components
 import { RegistrationForm } from '../RegistrationForm';
+import { RegistrationFormData } from '../../../types';
 
 export const Registration = () => {
-  const handleSubmit = (values) => {
+  const handleSubmit = (values: RegistrationFormData) => {
     window.alert(JSON.stringify(values, null, 4));
   };
 

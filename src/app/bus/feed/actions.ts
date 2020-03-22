@@ -1,8 +1,5 @@
 // Types
-import {
-  types,
-  Starship,
-} from './types';
+import { types, Starship } from './types';
 
 export const feedActions = {
   // Sync
@@ -22,4 +19,4 @@ export const feedActions = {
   }),
 };
 
-export type Actions = ReturnType<typeof feedActions[keyof typeof feedActions]>
+export type Actions = ReturnType<typeof feedActions[keyof typeof feedActions]>;

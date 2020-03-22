@@ -1,12 +1,8 @@
 // Types
-import { types } from './types';
+import { types, Profile } from './types';
 import { Actions } from './actions';
 
-export type ProfileState = {
-  firstName: string;
-  lastName: string;
-  isFetching: boolean;
-}
+export type ProfileState = Profile;
 
 const initialState: ProfileState = {
   firstName: 'Уолтер',
@@ -14,7 +10,7 @@ const initialState: ProfileState = {
   isFetching: false,
 };
 
-export const profileReducer = (state = initialState, action: Actions) => {
+export const profileReducer = (state = initialState, action: Actions): ProfileState => {
   switch (action.type) {
     case types.FILL_PROFILE:
       return { ...state, ...action.payload };

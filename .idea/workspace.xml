@@ -2,41 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00e821ed-6a51-464c-8a61-1bffb8182ec0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/bus/feed/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/routes/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/augmentation.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/saga/watchers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/saga/watchers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/saga/workers/fetchStarships.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/saga/workers/fetchStarships.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/saga/workers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/saga/workers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bus/profile/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/profile/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bus/profile/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/profile/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bus/profile/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/profile/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Bridge/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Bridge/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Fields/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Fields/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Nav/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Panel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Panel/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Profile/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Registration/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Registration/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/RegistrationForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/RegistrationForm/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/RegistrationForm/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/RegistrationForm/validation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Starship/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Starship/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/StarshipTile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/StarshipTile/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/init/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/init/middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/init/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/init/rootReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/saga/watchers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/saga/watchers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/saga/workers/fetchStarships.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/saga/workers/fetchStarships.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bus/feed/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/feed/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bus/profile/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/profile/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bus/profile/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/profile/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bus/profile/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bus/profile/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Bridge/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Bridge/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Fields/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Fields/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Nav/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Nav/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Panel/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Panel/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Registration/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Registration/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/RegistrationForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/RegistrationForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/RegistrationForm/validation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/RegistrationForm/validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Starship/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Starship/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/StarshipTile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/StarshipTile/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/init/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/init/middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/init/rootSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/init/rootSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/book.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/book.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/augmentation.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/augmentation.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +47,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -97,7 +88,8 @@
       <workItem from="1584629497448" duration="1214000" />
       <workItem from="1584679333923" duration="62000" />
       <workItem from="1584710584179" duration="1350000" />
-      <workItem from="1584771350721" duration="14436000" />
+      <workItem from="1584771350721" duration="16852000" />
+      <workItem from="1584863638482" duration="6752000" />
     </task>
     <servers />
   </component>
@@ -105,10 +97,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="108" width="800" height="684" key="#ESLint" timestamp="1584773999697">
+    <state x="395" y="108" width="800" height="684" key="#ESLint" timestamp="1584787738141">
       <screen x="0" y="27" width="1600" height="840" />
     </state>
-    <state x="395" y="108" width="800" height="684" key="#ESLint/0.27.1600.840/1600.0.1920.1080@0.27.1600.840" timestamp="1584773999697" />
+    <state x="395" y="108" width="800" height="684" key="#ESLint/0.27.1600.840/1600.0.1920.1080@0.27.1600.840" timestamp="1584787738141" />
     <state x="258" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584785845086">
       <screen x="0" y="27" width="1600" height="840" />
     </state>
@@ -117,13 +109,21 @@
       <screen x="0" y="27" width="1600" height="840" />
     </state>
     <state x="583" y="205" width="424" height="491" key="FileChooserDialogImpl/0.27.1600.840/1600.0.1920.1080@0.27.1600.840" timestamp="1584630621716" />
-    <state x="289" y="82" width="1022" height="737" key="SettingsEditor" timestamp="1584774898589">
+    <state x="289" y="82" width="1022" height="737" key="SettingsEditor" timestamp="1584871207023">
       <screen x="0" y="27" width="1600" height="840" />
     </state>
-    <state x="289" y="82" width="1022" height="737" key="SettingsEditor/0.27.1600.840/1600.0.1920.1080@0.27.1600.840" timestamp="1584774898589" />
-    <state x="451" y="154" width="698" height="586" key="find.popup" timestamp="1584782421817">
+    <state x="289" y="82" width="1022" height="737" key="SettingsEditor/0.27.1600.840/1600.0.1920.1080@0.27.1600.840" timestamp="1584871207023" />
+    <state x="274" y="39" width="1042" height="822" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584787074400">
       <screen x="0" y="27" width="1600" height="840" />
     </state>
-    <state x="451" y="154" width="698" height="586" key="find.popup/0.27.1600.840/1600.0.1920.1080@0.27.1600.840" timestamp="1584782421817" />
+    <state x="274" y="39" width="1042" height="822" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1600.840/1600.0.1920.1080@0.27.1600.840" timestamp="1584787074400" />
+    <state x="451" y="154" width="698" height="586" key="find.popup" timestamp="1584868569914">
+      <screen x="0" y="27" width="1600" height="840" />
+    </state>
+    <state x="451" y="154" width="698" height="586" key="find.popup/0.27.1600.840/1600.0.1920.1080@0.27.1600.840" timestamp="1584868569914" />
+    <state x="463" y="188" width="672" height="678" key="search.everywhere.popup" timestamp="1584871400875">
+      <screen x="0" y="27" width="1600" height="840" />
+    </state>
+    <state x="463" y="188" width="672" height="678" key="search.everywhere.popup/0.27.1600.840/1600.0.1920.1080@0.27.1600.840" timestamp="1584871400875" />
   </component>
 </project>

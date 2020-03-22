@@ -12,8 +12,8 @@ type OwnProps = {
   starship_class: string;
   manufacturer: string;
   crew: string;
-  children: never;
-}
+  children?: never;
+};
 
 export const StarshipTile = (props: OwnProps) => {
   const dispatch = useDispatch();

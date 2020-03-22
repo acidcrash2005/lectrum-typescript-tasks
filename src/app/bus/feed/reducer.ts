@@ -1,7 +1,5 @@
 // Types
-import {
-  Starship, types,
-} from './types';
+import { Starship, types } from './types';
 
 import { Actions } from './actions';
 

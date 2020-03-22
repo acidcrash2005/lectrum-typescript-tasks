@@ -1,13 +1,13 @@
 // Core
-import React from 'react';
+import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
-import { push } from 'connected-react-router';
+import { push, RouterState } from 'connected-react-router';
 
 // Instruments
 import Styles from './styles.module.css';
 import { book } from '../../routes/book';
 
-export const Nav = (props) => {
+export const Nav: FC<RouterState> = (props) => {
   const dispatch = useDispatch();
 
   const _navigateToRoot = () => dispatch(push(book.root));

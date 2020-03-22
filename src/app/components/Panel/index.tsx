@@ -7,14 +7,19 @@ import Styles from './styles.module.css';
 import { feedActions } from '../../bus/feed/actions';
 import { StarshipTile } from '../StarshipTile';
 
+// Types
+import { FeedState } from '../../bus/feed/reducer';
+import { AppState } from '../../../types';
+
 export const Panel = () => {
   const dispatch = useDispatch();
-  const starships = useSelector((state) => state.feed.starships);
-  const isFetching = useSelector((state) => state.feed.isFetching);
+  const { starships, isFetching } = useSelector<AppState, FeedState>((state) => state.feed);
 
   const _fetchPostsAsync = () => dispatch(feedActions.fetchStarshipsAsync());
 
-  const starshipsJSX = starships.map((starship) => <StarshipTile key={starship.name} {...starship} />);
+  const starshipsJSX = starships.map((starship) => (
+    <StarshipTile key={starship.name} {...starship} />
+  ));
 
   const buttonMessage = isFetching ? '⏳ Вызываю...' : '📲 Вызвать корабли';
 

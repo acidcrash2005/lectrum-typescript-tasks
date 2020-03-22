@@ -4,3 +4,9 @@ export const types = {
   START_FETCHING: 'START_FETCHING' as const,
   STOP_FETCHING: 'STOP_FETCHING' as const,
 };
+
+export type Profile = {
+  firstName: string;
+  lastName: string;
+  isFetching: boolean;
+}

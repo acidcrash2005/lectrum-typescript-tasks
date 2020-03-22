@@ -1,5 +1,5 @@
 // Core
-import React from 'react';
+import React, { FC } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { push } from 'connected-react-router';
 
@@ -8,10 +8,14 @@ import Styles from './styles.module.css';
 import observatory from './observatory.jpg';
 import { book } from '../../routes/book';
 
-export const Bridge = () => {
+// Types
+import { AppState } from '../../../types';
+import { ProfileState } from '../../bus/profile/reducer';
+
+export const Bridge: FC = () => {
   const dispatch = useDispatch();
-  const profile = useSelector((state) => state.profile);
-  const _proceed = () => dispatch(push(book.panel));
+  const profile = useSelector<AppState, ProfileState>((state) => state.profile);
+  const proceed = () => dispatch(push(book.panel));
 
   return (
     <section className={Styles.bridge}>
@@ -24,7 +28,7 @@ export const Bridge = () => {
 !
       </h1>
       <img src={observatory} alt="observatory" />
-      <button onClick={_proceed}>Контрольная панель</button>
+      <button type="button" onClick={proceed}>Контрольная панель</button>
     </section>
   );
 };

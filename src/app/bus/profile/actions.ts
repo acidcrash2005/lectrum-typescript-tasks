@@ -3,7 +3,7 @@ import { types, Profile } from './types';
 
 export const profileActions = {
   // Sync
-  fillProfile: (profile: Profile) => ({
+  fillProfile: (profile: Partial<Profile>) => ({
     type: types.FILL_PROFILE,
     payload: profile,
   }),
@@ -15,4 +15,4 @@ export const profileActions = {
   }),
 };
 
-export type Actions = ReturnType<typeof profileActions[keyof typeof profileActions]>
+export type Actions = ReturnType<typeof profileActions[keyof typeof profileActions]>;
